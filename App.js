@@ -1,20 +1,68 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from './screens/HomeScreen';
+import LoginScreen from './screens/LoginScreen';
+import ScannerScreen from './screens/ScannerScreen';
+import ProfileScreen from './screens/ProfileScreen';
+import ChauffeurManagementScreen from './screens/ChauffeurManagementScreen';
+import ChauffeurForm from './screens/ChauffeurForm';
+import ChauffeurQr from './screens/ChauffeurQr'; 
+import BusinessCardBadge from './screens/BusinessCardBadge'; 
+
+const Stack = createStackNavigator();
 
 export default function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen
+          name="Home"
+          options={{ title: 'Accueil' }}
+        >
+          {(props) => <HomeScreen {...props} isLoggedIn={isLoggedIn} />}
+        </Stack.Screen>
+        <Stack.Screen
+          name="Login"
+          options={{ title: 'Connexion' }}
+        >
+          {(props) => <LoginScreen {...props} setIsLoggedIn={setIsLoggedIn} />}
+        </Stack.Screen>
+        <Stack.Screen
+          name="Scanner"
+          component={ScannerScreen}
+          options={{ title: 'Scanner de QR Code' }}
+        />
+        <Stack.Screen
+          name="Profile"
+          component={ProfileScreen}
+          options={{ title: 'Profil du Conducteur' }}
+        />
+        <Stack.Screen
+          name="ChauffeurManagement"
+          component={ChauffeurManagementScreen}
+          options={{ title: 'Gestion des Chauffeurs' }}
+        />
+        <Stack.Screen
+          name="ChauffeurForm"
+          component={ChauffeurForm}
+          options={({ route }) => ({
+            title: route.params && route.params.chauffeurId ? 'Modifier Chauffeur' : 'Ajouter Chauffeur',
+          })}
+        />
+        <Stack.Screen
+          name="ChauffeurQr"
+          component={ChauffeurQr}
+          options={{ title: 'QR Code du Chauffeur' }}
+        />
+        <Stack.Screen
+          name="BusinessCardBadge"
+          component={BusinessCardBadge}
+          options={{ title: 'Badge du chauffeur' }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

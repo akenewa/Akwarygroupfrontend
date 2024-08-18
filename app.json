@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "ChauffeurScannerApp",
-    "slug": "ChauffeurScannerApp",
+    "name": "ChauffeurID",
+    "slug": "chauffeurid",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,10 +18,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.akenewa.chauffeurid"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5362cf8f-bf78-4fce-9e1e-eddd805ad068"
+      }
     }
   }
 }
