@@ -10,7 +10,7 @@ export default function ChauffeurManagementScreen({ navigation }) {
   const [search, setSearch] = useState('');
   const [filteredChauffeurs, setFilteredChauffeurs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 7;
+  const itemsPerPage = 8;
 
   useEffect(() => {
     fetchChauffeurs();
@@ -134,7 +134,7 @@ export default function ChauffeurManagementScreen({ navigation }) {
       </View>
       <TextInput
         style={styles.search}
-        placeholder="Rechercher par nom ou immatriculation"
+        placeholder="Recherche par nom,immatriculation,vehicule"
         value={search}
         onChangeText={setSearch}
       />

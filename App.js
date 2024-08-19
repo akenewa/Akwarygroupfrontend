@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import * as SplashScreen from 'expo-splash-screen';
+
 import HomeScreen from './screens/HomeScreen';
 import LoginScreen from './screens/LoginScreen';
 import ScannerScreen from './screens/ScannerScreen';
@@ -14,6 +16,21 @@ const Stack = createStackNavigator();
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    async function prepare() {
+      // Empêcher le splash screen de disparaître automatiquement
+      await SplashScreen.preventAutoHideAsync();
+
+      // Simuler un délai ou effectuer une tâche asynchrone (chargement de données, etc.)
+      await new Promise(resolve => setTimeout(resolve, 3000)); // 3000ms = 3 secondes
+
+      // Masquer le splash screen une fois prêt
+      await SplashScreen.hideAsync();
+    }
+
+    prepare();
+  }, []);
 
   return (
     <NavigationContainer>

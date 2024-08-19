@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   addButton: {
-    backgroundColor: 'green',
+    backgroundColor: 'blue',
     borderRadius: 50,
     padding: 10,
   },
@@ -98,8 +98,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   name: {
-    fontSize: 18,
-    fontWeight: 'bold',
+    fontSize: 14,
   },
   immatriculation: {
     fontSize: 14,
@@ -116,10 +115,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: 20,
+    marginTop: 10,
   },
   pageButton: {
-    fontSize: 18,
+    fontSize: 16,
     color: '#007BFF',
   },
   disabled: {

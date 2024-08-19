@@ -67,11 +67,11 @@ export default function ProfileScreen({ route }) {
           </View>
           <View style={styles.infoItem}>
             <FontAwesome name="phone" size={20} color="#000" />
-            <Text style={styles.label}>Tel: <Text style={styles.value}>{profile.contacts}</Text></Text>
+            <Text style={styles.label}> <Text style={styles.value}>{profile.contacts}</Text></Text>
           </View>
           <View style={styles.infoItem}>
             <FontAwesome name="briefcase" size={20} color="#000" />
-            <Text style={styles.label}>Statut: <Text style={styles.value}>{profile.statut}</Text></Text>
+            <Text style={styles.label}>Etat: <Text style={styles.value}>{profile.statut}</Text></Text>
           </View>
           <View style={styles.infoItem}>
             <FontAwesome name="building" size={20} color="#000" />
@@ -79,11 +79,11 @@ export default function ProfileScreen({ route }) {
           </View>
           <View style={styles.infoItem}>
             <FontAwesome name="car" size={20} color="#000" />
-            <Text style={styles.label}>Véhicule: <Text style={styles.value}>{profile.vehicule}</Text></Text>
+            <Text style={styles.label}> <Text style={styles.value}>{profile.vehicule}</Text></Text>
           </View>
           <View style={styles.infoItem}>
             <FontAwesome name="hashtag" size={20} color="#000" />
-            <Text style={styles.label}>Immatriculation: <Text style={styles.value}>{profile.immatriculation}</Text></Text>
+            <Text style={styles.label}>Matricule: <Text style={styles.value}>{profile.immatriculation}</Text></Text>
           </View>
         </View>
       </View>
@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
     marginVertical: 5,
   },
   label: {
-    fontSize: 16,
+    fontSize: 17,
     fontWeight: '600',
     color: '#555',
     marginLeft: 10,

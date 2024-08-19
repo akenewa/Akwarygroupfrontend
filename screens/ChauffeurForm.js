@@ -180,7 +180,7 @@ export default function ChauffeurForm({ route, navigation }) {
       />
       <TextInput
         style={styles.input}
-        placeholder="Prénom"
+        placeholder="Prénoms"
         value={prenom}
         onChangeText={setPrenom}
       />
@@ -189,13 +189,14 @@ export default function ChauffeurForm({ route, navigation }) {
         style={styles.input}
         onValueChange={(itemValue) => setStatut(itemValue)}
       >
-        <Picker.Item label="Définir statut" value="" />
-        <Picker.Item label="Titulaire" value="Titulaire" />
-        <Picker.Item label="Secondaire" value="Secondaire" />
+        <Picker.Item label="Définir état du chauffeur" value="" />
+        <Picker.Item label="Actif" value="Actif" />
+        <Picker.Item label="Inactif" value="Inactif" />
+        <Picker.Item label="Banni" value="Banni" />
       </Picker>
       <TextInput
         style={styles.input}
-        placeholder="Contacts"
+        placeholder="Contact"
         value={contacts}
         onChangeText={setContacts}
       />
@@ -232,7 +233,7 @@ export default function ChauffeurForm({ route, navigation }) {
       />
       <TextInput
         style={styles.input}
-        placeholder="Immatriculation"
+        placeholder="Matricule du véhicule"
         value={immatriculation}
         onChangeText={setImmatriculation}
       />

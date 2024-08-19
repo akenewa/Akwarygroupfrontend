@@ -75,7 +75,7 @@ export default function BusinessCardBadge({ route }) {
       <View ref={badgeRef} style={styles.badge}>
         <View style={styles.header}>
           <Text style={styles.companyName}>AKWARY GROUP SARL</Text>
-          <Text style={styles.title}>BADGE DE CHAUFFEUR</Text>
+          <Text style={styles.title}>CHAUFFEUR PROFESSIONNEL</Text>
         </View>
         <View style={styles.mediaContainer}>
           <View style={styles.imageAndQrContainer}>
@@ -93,16 +93,18 @@ export default function BusinessCardBadge({ route }) {
           </View>
           <View style={styles.infoContainer}>
             <View style={styles.infoItem}>
-             
-              <Text style={styles.name}>{profile.nom} {profile.prenom}</Text>
+              <Text style={styles.name}>{profile.nom} </Text>
+              </View>
+              <View style={styles.infoItem}>
+              <Text style={styles.surname}>{profile.prenom}</Text>
             </View>
             <View style={styles.infoItem}>
               <FontAwesome name="phone" size={20} color="#000" />
-              <Text style={styles.label}>Tel: <Text style={styles.value}>{profile.contacts}</Text></Text>
+              <Text style={styles.label}> <Text style={styles.value}>{profile.contacts}</Text></Text>
             </View>
             <View style={styles.infoItem}>
               <FontAwesome name="briefcase" size={20} color="#000" />
-              <Text style={styles.label}>Statut: <Text style={styles.value}>{profile.statut}</Text></Text>
+              <Text style={styles.label}>Etat: <Text style={styles.value}>{profile.statut}</Text></Text>
             </View> 
              <View style={styles.infoItem}>
               <FontAwesome name="building" size={20} color="#000" />
@@ -112,11 +114,11 @@ export default function BusinessCardBadge({ route }) {
           
             <View style={styles.infoItem}>
               <FontAwesome name="car" size={20} color="#000" />
-              <Text style={styles.label}>Véhicule: <Text style={styles.value}>{profile.vehicule}</Text></Text>
+              <Text style={styles.label}> <Text style={styles.value}>{profile.vehicule}</Text></Text>
             </View>
             <View style={styles.infoItem}>
               <FontAwesome name="hashtag" size={20} color="#000" />
-              <Text style={styles.label}>Immatriculation: <Text style={styles.value}>{profile.immatriculation}</Text></Text>
+              <Text style={styles.label}>Matricule: <Text style={styles.value}>{profile.immatriculation}</Text></Text>
             </View>
           </View>
         </View>
@@ -159,13 +161,14 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   companyName: {
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: 'bold',
     color: '#007BFF',
     textAlign: 'center',
   },
   title: {
-    fontSize: 18,
+    fontSize: 16,
+    fontWeight: 'bold',
     color: '#333',
     textAlign: 'center',
     marginTop: 5,
@@ -210,9 +213,16 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     color: '#333',
-    marginBottom: 10,
     marginLeft: 5,
     textAlign: 'left',
+  },
+    surname: {
+      fontSize: 16,
+      fontWeight: 'bold',
+      color: '#333',
+      marginBottom: 5,
+      marginLeft: 5,
+      textAlign: 'left',
   },
   label: {
     fontSize: 15,
