@@ -32,8 +32,8 @@ Ce projet constitue l'interface mobile pour  Akwary Group , une société spéci
 
 1.  Cloner le dépôt  :
     ```bash
-    git clone https://github.com/akwary-group/akwary-mobile-frontend.git
-    cd akwary-mobile-frontend
+    git clone https://github.com/akenewa/Akwarygroupfrontend.git
+    cd 
     ```
 
 2.  Installation des dépendances  :
