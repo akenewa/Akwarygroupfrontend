@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "ChauffeurID",
+    "name": "Akwary Group",
     "slug": "chauffeurid",
     "version": "1.1.0",
     "orientation": "portrait",
@@ -19,10 +19,18 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.akenewa.chauffeurid"
+      "package": "com.akenewa.akwarygroup"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "manifest": {
+        "background_color": "#ffffff",
+        "description": "Application de gestion integre de akwary group sarl",
+        "display": "standalone",
+        "start_url": "/",
+        "theme_color": "#ffffff"
+      },
+      "bundler": "metro"
     },
     "extra": {
       "eas": {
